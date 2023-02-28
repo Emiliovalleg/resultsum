@@ -1,34 +1,31 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import iconreac from '../public/icon-reaction.svg'
-import iconmemo from '../public/icon-memory.svg'
-import iconverb from '../public/icon-verbal.svg'
-import iconvisu from '../public/icon-visual.svg'
+
 
 
 const blocks = [
   {
     title:'Reaction',
     color:'bg-red-50 text-red-500',
-    icon:'../public/icon-reaction.svg',
+    icon:'/icon-reaction.svg',
     num:'80'
   },
   {
     title:'Memory',
     color:'bg-yellow-50 text-yellow-500',
-    icon:'../public/icon-memory.svg',
+    icon:'/icon-memory.svg',
     num:'92'
   } ,
   {
     title:'Verbal',
     color:'bg-green-50 text-green-500',
-    icon:'../public/icon-verbal.svg',
+    icon:'/icon-verbal.svg',
     num:'61'
   },
   {
     title:'Visual',
     color:'bg-blue-50 text-blue-500',
-    icon:'../public/icon-visual.svg',
+    icon:'/icon-visual.svg',
     num:'72'
   }
 ]
@@ -56,7 +53,7 @@ export default function Home() {
             {blocks.map((block, i) => ( 
               <div key={i} className={`flex w-full items-center justify-between rounded-xl p-5 ${block.color}`}>
                 <div className='flex items-center gap-3'>
-                  <div><Image src={ block.icon} alt='icon'/> </div>
+                  <div><Image  src={ block.icon} alt='icon' height={20} width={20}  /> </div>
                   <div>{block.title}</div>
                 </div>
                 <div className='flex items-center gap-2 text-black'><span className='text-gray-400'>{block.num}</span><span>/ 100</span></div>
